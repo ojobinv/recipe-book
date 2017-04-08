@@ -14,6 +14,13 @@ export class RecipeService {
     [
         new Ingredient('meat', 1),
         new Ingredient('french fries', 20)
+    ]),
+    new Recipe('Kappa Meen',
+    'Description of Kappa Meen',
+    'http://images.media-allrecipes.com/userphotos/250x250/00/68/79/687910.jpg',
+    [
+        new Ingredient('Kappa', 1),
+        new Ingredient('Fish', 5)
     ])
   ];
 
@@ -21,6 +28,9 @@ export class RecipeService {
 
   getRecipes() {
     return this.recipes.slice();
+  }
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
